@@ -9,8 +9,10 @@ plt.style.use('grayscale')
 
 from pathlib import Path
 
-data_path = Path('C:/Users/brodyga/Documents/МРТ проект/data/MRNet-v1.0')   # Укажи путь к папке с CSV-файлом
-train_path = Path('C:/Users/brodyga/Documents/МРТ проект/data/MRNet-v1.0/train')  # Укажи путь к папке с MRI-сканами
+# data_path = Path('C:/Users/brodyga/Documents/МРТ проект/data/MRNet-v1.0')   # Укажи путь к папке с CSV-файлом
+# train_path = Path('C:/Users/brodyga/Documents/МРТ проект/data/MRNet-v1.0/train')  # Укажи путь к папке с MRI-сканами
+data_path = Path(input("Укажи путь к папке с CSV-файлом: "))
+train_path = Path(input("Укажи путь к папке с MRI-сканами (npy): "))
 
 train_abnl = pd.read_csv(data_path/'train-abnormal.csv', header=None,
                        names=['Case', 'Abnormal'], 
